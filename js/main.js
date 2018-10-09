@@ -1,8 +1,9 @@
-//========================1= question welcome the user
+//========================1=
 alert('hello welcome');
 //========================2=
 
 let name = prompt('Whats your name?');
+
 alert(`hello ${name}, welcome:)`);
 //========================3=
 let answer = confirm('Do you like soccer?');
@@ -11,7 +12,7 @@ if (!answer) {
   console.log(`${name} hates to play soccer`);
   document.getElementById('soccer').innerHTML = `${name} hates to play soccer`;
 } else {
-  console.log(`${name} like to play soccer`);
+  console.log(`${name} likes to play soccer`);
   document.getElementById('soccer').innerHTML = `${name} likes to play soccer`;
 }
 console.log('========= old even number list ============');
@@ -26,8 +27,8 @@ for (let i = 0; i < 16; i++) {
     console.log(`${i} is even`);
     oldEvenList += `${i} is even <br><br>`;
   } else {
-    console.log(`${i} is old`);
-    oldEvenList += `${i} is old <br><br>`;
+    console.log(`${i} is odd`);
+    oldEvenList += `${i} is odd <br><br>`;
   }
 }
 
@@ -37,17 +38,17 @@ document.getElementById('qtn2').innerHTML = oldEvenList;
 // the sum function
 //======================================================
 
-function sum(firstNumber, secondNumber) {
+function sum() {
   var sumTotal = 0;
   var i = 0;
-  while (i < 3) {
-    sumTotal += i;
+  while (i < arguments.length) {
+    sumTotal += arguments[i];
     i++;
   }
-  return firstNumber + secondNumber;
+  return sumTotal;
 }
 console.log('========SUM FUNCTION=================');
-console.log(sum(30, 30));
+console.log(sum(30, 30, 90));
 
 //=======================================
 // write a javascript program to delete
